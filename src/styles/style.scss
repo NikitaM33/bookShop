@@ -1,0 +1,41 @@
+@import 'libs/normalize';
+@import 'variables';
+@import 'components/all';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $textBlue;
+}
+
+h1 {
+    user-select: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $textBlue;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: calc(100vw - 100px);
+    max-width: 1400px;
+    height: 100%;
+    margin: 50px auto;
+    border-radius: 10px;
+
+    @media screen and (max-width: 425px) {
+        width: calc(120vw - 100px);
+        margin: 20px auto;
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 100vw;
+        margin: 0;
+    }
+}

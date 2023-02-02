@@ -1,0 +1,66 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        flex: 0 0 10%;
+        
+        & a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $darkBlue;
+        }
+    }
+
+    &__navigation {
+        flex: 0 0 45%;
+
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        & li {
+            & a {
+                flex-grow: 1;
+                flex-basis: 0;
+                font-weight: 700;
+                font-size: $O9;
+                color: $textBlue;
+                text-transform: uppercase;
+                transition: ease 0.3s;
+            }
+
+            &:hover a {
+                color: $darkBlue;
+                text-shadow: $textHoverShadow;
+            }
+        }
+    }
+
+    &__iconNavigation {
+        flex: 0 0 10%;
+
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        & li {
+            & svg {
+                transition: ease 0.3s;
+            }
+
+            &:hover {
+                & svg {
+                    filter: drop-shadow(0 0 1px $darkBlue);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.catalog {
+    padding-top: 8.3rem;
+
+    &__content {
+        display: flex;
+    }
+}
+
+.categoryes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26rem;
+    margin-left: -9vw;
+    padding: 2.81rem;
+    background: $skyBlue;
+
+    & li {
+        position: relative;
+        margin-bottom: 1.43rem;
+        font-size: $O9;
+        transition: $transition;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: -10%;
+            width: 0.37rem;
+            height: 0.37rem;
+            background: $velvet;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: $transition;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: $darkBlue;
+            text-shadow: $textHoverShadow;
+            transform: scale(1.04);
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 85%;
+    min-width: 35%;
+    margin: 2.6rem 0 0 -4rem;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 0 4.5rem 4.5rem 0;
+    }
+
+    &__img {
+        width: 13.25rem;
+        margin-right: 2.25rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15rem;
+    }
+
+    &__buyBtn {
+
+        & button {
+            width: 15rem;
+            height: 3rem;
+            background: transparent;
+            color: $richVelvet;
+            font-weight: 700;
+            font-size: $O9;
+            text-transform: uppercase;
+            border: 1px solid $richVelvet;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        &:hover>button {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.descr {
+    &__author,
+    &__reviews,
+    &__annotation {
+        color: $greyText;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: $O9;
+        line-height: 1.3rem;
+    }
+
+    &__name {
+        margin: 0.25rem 0 0.25rem 0;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        margin-right: 0.37rem;
+    }
+
+    &__rating ,
+    &__annotation,
+    &__price {
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+        color: $darkBlue;
+        font-weight: 700;
+        font-size: $i1;
+        text-transform: uppercase;
+    }
+}
