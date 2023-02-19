@@ -1,6 +1,4 @@
 class Request {
-  constructor() {}
-
   async fetchBooks<T>(url: string): Promise<T> {
     const response = await fetch(url);
     const res = await response.json();
@@ -9,7 +7,7 @@ class Request {
       throw new Error(`Get запрос не выполнился: ${response.statusText}`);
     }
 
-    console.log("RESPONSE", response);
+    console.log('FETCH_BOOKS: RESPONSE', res)
     return res;
   }
 }
